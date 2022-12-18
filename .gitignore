@@ -1,0 +1,4 @@
+.asciidoctor/
+stem-*
+diagram-*
+*.pdf

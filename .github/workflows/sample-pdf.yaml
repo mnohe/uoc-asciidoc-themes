@@ -1,0 +1,36 @@
+name: CAA 2
+
+on:
+  push:
+    branches:
+    - main
+  pull_request:
+
+jobs:
+  sample_pdf:
+    runs-on: ubuntu-22.04
+    name: Build Asciidoc sample
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Build PDF
+        uses: tonynv/asciidoctor-action@v2
+        with:
+          program: |
+            asciidoctor-pdf \
+            -r asciidoctor-mathematical \
+            -a mathematical-format=svg \
+            -r asciidoctor-diagram \
+            -a diagram-format=svg \
+            -a pdf-theme=uoc \
+            -a pdf-themesdir=. \
+            -a pdf-fontsdir=./fonts \
+            sample.adoc
+
+      - name: Upload PDF Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: uoc-asciidoc-theme-sample.pdf
+          path: sample.pdf
+          if-no-files-found: error

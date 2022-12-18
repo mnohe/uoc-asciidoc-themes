@@ -1,0 +1,100 @@
+= Title: Subtitle
+:author: The Author <the@author.org>
+:doctype: book
+:pdf-theme: uoc
+:source-highlighter: rouge
+:sectnums:
+:sectnumlevels: 3
+:stem:
+
+== A section
+
+=== A subsection
+
+This is a sample paragraph.
+
+:sectnums!:
+==== An unnumbered heading
+Further down the heading road.
+
+:sectnums:
+==== This one is numbered though.
+
+===== This
+===== level
+===== is
+===== unnumbered
+
+=== Tables
+
+.Table with row style e,a,m in second row{zwsp}footnote:[From https://blog.mrhaki.com/2014/11/awesome-asciidoctor-styling-columns-and.html]
+
+|===
+
+| Emphasized | Asciidoc | Monospaced
+
+| Asciidoctor
+| NOTE: *Awesome* way to write documentation
+| It is just code
+
+e| Asciidoctor
+a| NOTE: *Awesome* way to write documentation
+m| It is just code
+
+|===
+
+
+== Extensions
+
+=== Code
+
+[source,java]
+----
+package uoc.sample;
+
+class AsciiDoctor {
+    private static logger = Logger.getLogger(AsciiDoctor.class);
+
+    public static void main(String[] args) {
+        System.out.println("Hello, world!");
+    }
+}
+----
+
+=== STEM
+
+Water (stem:[H_2O]) is a critical component.
+
+.latexmath
+[latexmath]
+++++
+k_{n+1} = n^2 + k_n^2 - k_{n-1}
+++++
+
+.stem
+[stem]
+++++
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+++++
+
+
+=== Diagrams
+
+[plantuml]
+----
+@startuml
+
+actor Foo1
+boundary Foo2
+control Foo3
+entity Foo4
+database Foo5
+collections Foo6
+Foo1 -> Foo2 : To boundary
+Foo1 -> Foo3 : To control
+Foo1 -> Foo4 : To entity
+Foo1 -> Foo5 : To database
+Foo1 -> Foo6 : To collections
+
+@enduml
+----
