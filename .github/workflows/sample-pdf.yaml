@@ -1,4 +1,4 @@
-name: CAA 2
+name: Asciidoc sample
 
 on:
   push:
