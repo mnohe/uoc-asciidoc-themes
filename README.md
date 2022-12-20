@@ -4,6 +4,13 @@
 
 ## Usage
 
+Generally, you can bring this project in as a sub-module:
+
+``` sh
+git submodule add https://github.com/mnohe/uoc-asciidoc-theme
+```
+and run the following command on your Asciidoc sources:
+
 ``` sh
 docker run --rm -v $(pwd):/documents/ \
   asciidoctor/docker-asciidoctor \
@@ -13,8 +20,8 @@ docker run --rm -v $(pwd):/documents/ \
   -a mathematical-format=svg \
   -a diagram-format=svg \
   -a pdf-theme=uoc \
-  -a pdf-themesdir=<uoc-asciidoc-theme_location> \
-  -a pdf-fontsdir=<uoc-asciidoc-theme_location>/fonts \
+  -a pdf-themesdir=uoc-asciidoc-theme \
+  -a pdf-fontsdir=uoc-asciidoc-theme/fonts \
   index.adoc
 ```
 
