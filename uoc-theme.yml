@@ -8,25 +8,78 @@ extends: default-for-print
 font:
   catalog:
     merge: true
-    EB Garamond:
+    Text:
       normal: eb_garamond/EBGaramond-Regular.ttf
       bold: eb_garamond/EBGaramond-Bold.ttf
       italic: eb_garamond/EBGaramond-Italic.ttf
       bold_italic: eb_garamond/EBGaramond-BoldItalic.ttf
-    Libre Franklin:
+    Headings:
       normal: libre_franklin/LibreFranklin-Medium.ttf
       italic: libre_franklin/LibreFranklin-MediumItalic.ttf
       bold: libre_franklin/LibreFranklin-Black.ttf
       bold_italic: libre_franklin/LibreFranklin-BlackItalic.ttf
-base_font_family: EB Garamond
+    Mono:
+      normal: jetbrains_mono/JetBrainsMono-Light.ttf 
+      italic: jetbrains_mono/JetBrainsMono-LightItalic.ttf 
+      bold: jetbrains_mono/JetBrainsMono-Bold.ttf
+      bold_italic: jetbrains_mono/JetBrainsMono-BoldItalic.ttf
+base:
+  font_family: Text
+  font_size: 11
+heading:
+  font_family: Headings
+  font_style: normal
+code:
+  font_family: Mono
+  font_size: 9
+codespan:
+  font_family: Mono
+  font_size: 85%
+kbd_font_family:
+  font_family: Mono
+  font_size: 85%
+btn_font_family:
+  font_family: Mono
+  font_size: 85%
 title_page:
   title:
-    font_family: Libre Franklin
+    font_family: Headings
     font_size: 64
   subtitle:
     font_style: normal
-heading_font_family: Libre Franklin
-base_font_size: 11
+page:
+  margin: [1in, 1in, 1in, 1in]
+  margin-inner: 2in
+  margin-outer: 1in
 quote:
   font_color: #666666
   font_size: $base_font_size_small
+header:
+  height: $base_line_height_length * 4.0
+  font_color: 666666
+  border_color: dddddd
+  border_width: .5
+  line_height: 1.5
+  padding: [$base_line_height_length / 2, 1, 0, 1]
+  vertical_align: bottom
+  margin: [0, 1in]
+  content-margin: [0, auto]
+  recto:
+    right:
+      content: '{document-subtitle} » {document-title} » {chapter-title}'
+  verso:
+    left:
+      content: $header-recto-right-content
+footer:
+  font_color: 666666
+  border_color: dddddd
+  border_width: .5
+  margin: [0, 1in]
+  content-margin: [0, auto]
+  recto:
+    right:
+      content: '{page-number}'
+  verso:
+    left:
+      content: $footer-recto-right-content
+

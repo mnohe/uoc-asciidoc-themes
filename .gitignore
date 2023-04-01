@@ -1,4 +1,5 @@
 .asciidoctor/
 stem-*
-diagram-*
+diag-*
 *.pdf
+\?
