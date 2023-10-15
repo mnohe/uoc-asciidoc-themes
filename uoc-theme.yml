@@ -41,6 +41,8 @@ kbd_font_family:
 btn_font_family:
   font_family: Mono
   font_size: 85%
+table:
+  font_size: 85%
 title_page:
   title:
     font_family: Headings
