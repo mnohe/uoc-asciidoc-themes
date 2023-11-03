@@ -31,7 +31,8 @@ heading:
   font_style: normal
 code:
   font_family: Mono
-  font_size: 9
+  font_size: 75%
+  font_size_min: 4
 codespan:
   font_family: Mono
   font_size: 85%
@@ -84,4 +85,3 @@ footer:
   verso:
     left:
       content: $footer-recto-right-content
-
