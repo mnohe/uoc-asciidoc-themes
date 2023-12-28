@@ -29,13 +29,16 @@ base:
 heading:
   font_family: Headings
   font_style: normal
+  # Prevent orphan headings.
+  # https://docs.asciidoctor.org/pdf-converter/latest/breakable-and-unbreakable/#section-or-discrete-heading
+  min-height-after: auto
 code:
   font_family: Mono
   font_size: 75%
   font_size_min: 4
 codespan:
   font_family: Mono
-  font_size: 85%
+  font_size: 75%
 kbd_font_family:
   font_family: Mono
   font_size: 85%
