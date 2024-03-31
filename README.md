@@ -22,8 +22,9 @@ docker run --rm \
   -a mathematical-format=svg \
   -a diagram-format=svg \
   -a pdf-theme=uoc \
-  -a pdf-themesdir=uoc-asciidoc-theme \
-  -a pdf-fontsdir=uoc-asciidoc-theme/fonts \
+  -a pdf-themesdir=uoc-asciidoc-themes \
+  -a pdf-fontsdir=uoc-asciidoc-themes/fonts \
+  -a rouge-style=github-dark \
   path/to/index.adoc
 ```
 
@@ -41,6 +42,7 @@ docker run --rm \
   -a diagram-format=svg \
   -a pdf-themesdir=/documents \
   -a pdf-fontsdir=/documents/fonts \
+  -a rouge-style=github-dark \
   -a pdf-theme=uoc \
   sample.adoc
 ```

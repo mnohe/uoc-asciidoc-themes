@@ -1,3 +1,4 @@
+
 ---
 # Asciidoctor PDF theme for UOC assignments and deliveries.
 #
@@ -32,6 +33,8 @@ heading:
   # Prevent orphan headings.
   # https://docs.asciidoctor.org/pdf-converter/latest/breakable-and-unbreakable/#section-or-discrete-heading
   min-height-after: auto
+section:
+  indent: [1in, 0]
 code:
   font_family: Mono
   font_size: 75%
@@ -51,14 +54,24 @@ title_page:
   title:
     font_family: Headings
     font_size: 64
+    text-transform: uppercase
   subtitle:
+    font_family: Headings
     font_style: normal
+  authors:
+    margin-top: 192
+    content:
+      name_only: |-
+        {author}
+        #{student_id}
+      with_email: |-
+        {author}
+        `<{email}>`
+        #{student_id}
 page:
   margin: [1in, 1in, 1in, 1in]
-  margin-inner: 2in
-  margin-outer: 1in
 quote:
-  font_color: #666666
+  font_color: 666666
   font_size: $base_font_size_small
 header:
   height: $base_line_height_length * 4.0
@@ -70,21 +83,23 @@ header:
   vertical_align: bottom
   margin: [0, 1in]
   content-margin: [0, auto]
-  recto:
-    right:
-      content: '{document-subtitle} » {document-title} » {chapter-title}'
-  verso:
+  recto: &common-header
     left:
-      content: $header-recto-right-content
+      content: '{document-subtitle}'
+    right:
+      content: '{document-title} » {chapter-title}'
+  verso: *common-header
 footer:
   font_color: 666666
   border_color: dddddd
   border_width: .5
-  margin: [0, 1in]
+  margin: [1in, 1in]
   content-margin: [0, auto]
-  recto:
+  recto: &common-footer
+    left:
+      content: |-
+        {author}
+        `<{email}>`
     right:
       content: '{page-number}'
-  verso:
-    left:
-      content: $footer-recto-right-content
+  verso: *common-footer
