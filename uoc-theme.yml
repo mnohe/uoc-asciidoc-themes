@@ -10,15 +10,15 @@ font:
   catalog:
     merge: true
     Text:
-      normal: eb_garamond/EBGaramond-Regular.ttf
-      bold: eb_garamond/EBGaramond-Bold.ttf
-      italic: eb_garamond/EBGaramond-Italic.ttf
-      bold_italic: eb_garamond/EBGaramond-BoldItalic.ttf
+      normal: source_serif_pro/SourceSerif4-Regular.ttf
+      bold: source_serif_pro/SourceSerif4-Bold.ttf
+      italic: source_serif_pro/SourceSerif4-Italic.ttf
+      bold_italic: source_serif_pro/SourceSerif4-BoldItalic.ttf
     Headings:
-      normal: libre_franklin/LibreFranklin-Medium.ttf
-      italic: libre_franklin/LibreFranklin-MediumItalic.ttf
-      bold: libre_franklin/LibreFranklin-Black.ttf
-      bold_italic: libre_franklin/LibreFranklin-BlackItalic.ttf
+      normal: chivo/Chivo-Regular.ttf
+      italic: chivo/Chivo-Italic.ttf
+      bold: chivo/Chivo-Black.ttf
+      bold_italic: chivo/Chivo-BlackItalic.ttf
     Mono:
       normal: jetbrains_mono/JetBrainsMono-Light.ttf 
       italic: jetbrains_mono/JetBrainsMono-LightItalic.ttf 
@@ -26,22 +26,26 @@ font:
       bold_italic: jetbrains_mono/JetBrainsMono-BoldItalic.ttf
 base:
   font_family: Text
-  font_size: 11
+  font_size: 12
+section:
+  indent: [1in, 0]
 heading:
   font_family: Headings
-  font_style: normal
+  font_style: bold
   # Prevent orphan headings.
   # https://docs.asciidoctor.org/pdf-converter/latest/breakable-and-unbreakable/#section-or-discrete-heading
   min-height-after: auto
-section:
-  indent: [1in, 0]
+  h2:
+    font_size: $base-font-size * 3
+  h3:
+    padding: [0,0,0,-0.5in]
 code:
   font_family: Mono
   font_size: 75%
-  font_size_min: 4
+  font_size_min: 3
 codespan:
   font_family: Mono
-  font_size: 75%
+  # font_size: 75%
 kbd_font_family:
   font_family: Mono
   font_size: 85%
@@ -53,13 +57,15 @@ table:
 title_page:
   title:
     font_family: Headings
-    font_size: 64
-    text-transform: uppercase
+    font_size: $base_font_size * 8
+    text_transform: uppercase
+    font_style: bold
   subtitle:
     font_family: Headings
     font_style: normal
+    font_size: $base_font_size * 1.2
   authors:
-    margin-top: 192
+    margin-top: 156
     content:
       name_only: |-
         {author}
@@ -69,7 +75,7 @@ title_page:
         `<{email}>`
         #{student_id}
 page:
-  margin: [1in, 1in, 1in, 1in]
+  margin: [1in, 1in, 1.5in, 1in]
 quote:
   font_color: 666666
   font_size: $base_font_size_small
