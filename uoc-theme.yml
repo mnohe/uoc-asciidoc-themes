@@ -45,7 +45,7 @@ code:
   font_size_min: 3
 codespan:
   font_family: Mono
-  # font_size: 75%
+  font_size: 90%
 kbd_font_family:
   font_family: Mono
   font_size: 85%
