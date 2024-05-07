@@ -9,6 +9,18 @@ image:
   float-gap: [12, 6]
 page:
   margin: [1.5in, 1in, 1.5in, 1in]
+title_page:
+  title:
+    font_family: Headings
+    font_size: $base_font_size * 10
+  subtitle:
+    font_family: Headings
+    font_style: normal
+    font_size: $base_font_size * 1.25
+  authors:
+    font_family: Headings
+    font_size: $base_font_size * 0.75
+    margin_top: $base_font_size
 header:
   line_height: 1
   height: $base_line_height_length * 3.0

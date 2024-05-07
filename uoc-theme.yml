@@ -63,9 +63,11 @@ title_page:
   subtitle:
     font_family: Headings
     font_style: normal
-    font_size: $base_font_size * 1.2
+    font_size: $base_font_size * 1.25
   authors:
-    margin-top: 156
+    font_family: Headings
+    font_size: $base_font_size * 0.75
+    margin-top: 128
     content:
       name_only: |-
         {author}
