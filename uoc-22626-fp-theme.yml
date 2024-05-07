@@ -1,0 +1,25 @@
+---
+# Asciidoctor PDF theme for the final practical assignment of UOC's course "Network and system administration".
+#
+# Based on 'uoc-theme'
+# https://github.com/asciidoctor/asciidoctor-pdf/blob/main/data/themes/default-for-print-theme.yml
+
+extends: uoc
+image:
+  float-gap: [12, 6]
+page:
+  margin: [1.5in, 1in, 1.5in, 1in]
+header:
+  line_height: 1
+  height: $base_line_height_length * 3.0
+  vertical_align: top
+  margin: [0.5in, 1in, 0, 1in]
+  recto: &common-header
+    left:
+      content: '{document-subtitle} pass:q[<br>] {document-title} » {chapter-title}'
+    right:
+      content: 'Host: `192.168.123.1` pass:q[<br>] Guest: `192.168.123.100`'
+  verso: *common-header
+heading:
+  h2:
+    font_size: $base-font-size * 2.5
