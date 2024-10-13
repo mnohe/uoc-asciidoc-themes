@@ -77,7 +77,7 @@ title_page:
         `<{email}>`
         #{student_id}
 page:
-  margin: [1in, 1in, 1.5in, 1in]
+  margin: [1in, 1in, 1in, 1in]
 quote:
   font_color: 666666
   font_size: $base_font_size_small
@@ -101,7 +101,7 @@ footer:
   font_color: 666666
   border_color: dddddd
   border_width: .5
-  margin: [1in, 1in]
+  margin: [0, 1in]
   content-margin: [0, auto]
   recto: &common-footer
     left:

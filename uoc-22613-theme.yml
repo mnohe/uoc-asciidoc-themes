@@ -1,0 +1,26 @@
+---
+# Asciidoctor PDF theme for Advanced Web Programming (22.163) assignments and deliveries.
+#
+# Based on 'uoc' theme
+# https://github.com/mnohe/uoc-asciidoc-themes/blob/main/uoc-theme.yml
+
+extends: uoc
+header:
+  line_height: 1
+  recto: &common-header
+    right:
+      content: |-
+        {author}
+        #274575
+        pass:q[<br>]
+        `<{email}>`
+    left:
+      content: '{document-subtitle} pass:q[<br>] {document-title} » {chapter-title}'
+  verso: *common-header
+footer:
+  recto: &common-footer
+    left:
+      content: ''
+    right:
+      content: '{page-number}'
+  verso: *common-footer
