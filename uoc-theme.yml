@@ -67,7 +67,7 @@ title_page:
   authors:
     font_family: Headings
     font_size: $base_font_size * 0.75
-    margin-top: 128
+    margin-top: 180
     content:
       name_only: |-
         {author}
@@ -98,6 +98,7 @@ header:
       content: '{document-title} » {chapter-title}'
   verso: *common-header
 footer:
+  height: 0.75in
   font_color: 666666
   border_color: dddddd
   border_width: .5
