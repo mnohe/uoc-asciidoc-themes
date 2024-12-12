@@ -1,0 +1,13 @@
+---
+# Asciidoctor PDF theme for Software Architecture (22.618) assignments and deliveries.
+#
+# Based on 'uoc' theme
+# https://github.com/mnohe/uoc-asciidoc-themes/blob/main/uoc-theme.yml
+
+extends: uoc
+base:
+  font_size: 10
+table:
+  font_size: 65%
+footnotes:
+  font_size: $base_font_size * 0.7
